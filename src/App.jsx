@@ -8,8 +8,14 @@ import UserState from "./context/users/UserState";
 function App() {
   return (
     <UserState>
-      <UserList />
-      <UserProfile />
+      <div className="grid grid-cols-2 font-body">
+        <div className="col-span-2 md:col-span-1 p-6 order-last sm:order-first">
+          <UserList />
+        </div>
+        <div className="col-span-2 md:col-span-1">
+          <UserProfile />
+        </div>
+      </div>
     </UserState>
   );
 }
